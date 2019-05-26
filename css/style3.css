@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+.khung {
+	width:300px;
+    height:250px;
+    margin:30px auto;
+	position:relative;
+	border: solid 1px #CCC;
+	border-radius:5px;
+	background-image: url(../images/image29.png);
+}
+.logo {
+	margin:3px;
+}
+.khung .hinh1 {
+	position: absolute;
+	opacity:0;
+	width:120px;
+	top:100px;
+	left:-100px;
+	z-index:1;
+	animation: hinh1Animation 12s linear infinite ; 
+}
+
+.khung .hinh2 {
+	position: absolute;
+	opacity:0;
+	width:120px;
+	top:100px;
+	right:-100px;
+	z-index:1;
+	animation: hinh2Animation 12s linear infinite ; 
+}
+.khung .xe1 {
+	position: absolute;
+	opacity:0;
+	top:150px;
+	left:80px;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:#666;
+	font-size:20px;
+	z-index:1;
+	animation: xe1Animation 12s linear infinite ;
+}
+.khung .xe2 {
+	position: absolute;
+	opacity:0;
+	top:150px;
+	right:80px;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:#666;
+	font-size:20px;
+	z-index:1;
+	animation: xe1Animation 12s linear infinite ;
+}
+.khung .tieude {
+	position: absolute;
+	opacity:0;
+	top:10px;
+	right:15px;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:#DA4242;
+	font-size:24px;
+	z-index:1;
+	animation: tieudeAnimation 12s linear infinite ;
+}
+.khung .noidung {
+	position: absolute;
+	opacity:0;
+	top:40px;
+	right:15px;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	color:#666;
+	font-size:20px;
+	z-index:1;
+	animation: noidungAnimation 12s linear infinite ;
+}
+.khung .timhieuthem {
+	width:100px;
+	position:absolute;
+	bottom:10px;
+	right:15px;
+	z-index:1;
+	animation: timhieuthemAnimation 12s linear infinite, pulse 1s infinite ;
+}
+@keyframes hinh1Animation { 
+	0% {
+	    opacity: 0;
+		transform: translateX(-100px);
+	}
+	10% {
+		opacity: 1;
+		transform: translateX(130px);
+	}
+	
+	99% {
+	    opacity:1;
+		transform: translateX(130px);
+	}
+	100% { 
+		opacity: 0 ;
+		transform: translateX(130px);
+	}
+}
+@keyframes hinh2Animation { 
+	0% {
+	    opacity: 0;
+		transform: translateX(100px);
+	}
+	10% {
+		opacity: 1;
+		transform: translateX(-130px);
+	}
+	
+	95% {
+	    opacity:1;
+		transform: translateX(-130px);
+		
+	}
+	100% { 
+		opacity: 0;
+		transform: translateX(-130px);
+	}
+}
+@keyframes xe1Animation { 
+	0%,10% {
+	    opacity: 0;
+	}
+	
+	20%	{
+		opacity: 1;
+	}
+	95% {
+	    opacity:1;
+	}
+	100% { opacity: 0 }
+}
+@keyframes xe2Animation { 
+	0%,10% {
+	    opacity: 0;
+	}
+	
+	20%	{
+		opacity: 1;
+	}
+	95% {
+	    opacity:1;
+	}
+	100% { opacity: 0 }
+}
+@keyframes tieudeAnimation { 
+	0%,20% {
+	    opacity: 0;
+		transform: translateY(-100px);
+	}
+	
+	30%	{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	95% {
+	    opacity:1;
+		transform: translateY(0px);
+	}
+	100% { opacity: 0 }
+}
+@keyframes noidungAnimation { 
+	0%,30% {
+	    opacity: 0;
+		transform: translateY(-100px);
+	}
+	
+	40%	{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	95% {
+	    opacity:1;
+		transform: translateY(0px);
+	}
+	100% { opacity: 0 }
+}
+@keyframes timhieuthemAnimation {
+	0%,40% {
+	    opacity: 0;
+	}
+	
+	45%	{
+		opacity: 1;
+	}
+	95% {
+	    opacity:1;
+	}
+	100% { opacity: 0 }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }	
+	50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
